@@ -12,7 +12,7 @@ class Player(object):
         self.winner = False
 
 
-    def makeMove(self, openings):
+    def makemove(self, openings):
         if self.name == "AI":
             print("AI's turn\n")
             #time.sleep(3)
@@ -23,7 +23,7 @@ class Player(object):
                 square = int(square)
             except ValueError:
                 print("Invalid choice. Please enter an available spot.")
-                square = self.makeMove(openings)
+                square = self.makemove(openings)
         return square
 
     def updatespacestaken(self, square):

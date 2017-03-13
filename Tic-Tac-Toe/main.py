@@ -39,7 +39,7 @@ class Game(object):
     def taketurn(self, player):
         while self.board.possiblemoves:
             self.board.print_board()
-            move = player.makeMove(self.board.possiblemoves)
+            move = player.makemove(self.board.possiblemoves)
             space = self.board.updateBoard(move, player.marker)
             print("\nHere is the popped token:")
             print(space)
