@@ -11,7 +11,6 @@ class Player(object):
         self.spacestaken = []
         self.winner = False
 
-
     def makemove(self, openings):
         if self.name == "AI":
             print("AI's turn\n")

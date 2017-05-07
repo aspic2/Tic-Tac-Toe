@@ -46,7 +46,7 @@ class Game(object):
             print("\nSpaces still available: ")
             print(self.board.possiblemoves)
             player.updatespacestaken(space)
-            print("\nPlayer's taken spots:")
+            print("\n%s's taken spots:" % player.name)
             print(player.spacestaken)
             return self.check(player)
         else:
