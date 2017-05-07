@@ -8,8 +8,8 @@
 
 '''
 
-from Board import Board
-from Player import Player
+from TicTacToe.Board import Board
+from TicTacToe.Player import Player
 from sys import exit
 
 class Game(object):
