@@ -8,6 +8,7 @@ class Board(object):
         self.winner = False
 
     def updateBoard(self, square=5, marker='#'):
+        player_marker = marker
         # compensate for 0 indexing
         square = square
         if self.gameboard[square] in self.possiblemoves:
