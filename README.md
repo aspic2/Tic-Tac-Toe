@@ -1,11 +1,12 @@
 # TicTacToe
-Game of Tic-Tac-Toe against the computer (currently not working)
+Game of Tic-Tac-Toe against the computer.
 Prints a game grid to your command line where you take turns playing against
 your computer until one of you wins or the board fills up.
 
+*At the moment, the computer uses pseudorandom move selection, but this will
+be updated to proper minimax AI soon.*
+
 ## How To Play
-*TODO: Game evaluation is currently not working, so the game will continue
-until the board fills up and will be called a stalemate.*
 
 0 | 1 | 2  
 --+---+--  
@@ -19,10 +20,10 @@ Next the board is built and gameplay begins.
 
 *TODO: make game board size scalable. Board technically is scalable now
 TODO: (defaults to 3x3, but can be changed)
-TODO: In practice, scalable board is restricted by two things:
+TODO: In practice, scalable board is restricted by two things:*
 1. print_board formatting
 2. Game evaluation (how to keep winning evaluation without writing out all
-  winning possibilities for each board size)*
+  winning possibilities for each board size)
 
 Each round you will see a printout of the board. Put in the number for the
 square where you would like to move, and your token will replace the current
@@ -37,4 +38,5 @@ TicTacToe is written in Python 3. No other packages or extensions needed!
 
 
 ## LICENSE
-TicTacToe is under the MIT license.
+TicTacToe is under the MIT license. You may only use and distribute TicTacToe
+in accordance with the license.
