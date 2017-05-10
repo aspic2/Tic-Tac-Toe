@@ -27,3 +27,7 @@ class Player(object):
 
     def updatespacestaken(self, square):
         self.spacestaken.append(square)
+
+
+class AI(Player):
+    pass

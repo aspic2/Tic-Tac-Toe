@@ -9,5 +9,11 @@ class testPlayer(unittest.TestCase):
         self.assertEqual(Player().winner, False)
 
 
+class testAI(unittest.TestCase):
+    def test_logic(self):
+        pass
+
+
+
 if __name__ == '__main__':
     unittest.main()
