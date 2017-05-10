@@ -5,13 +5,19 @@ from TicTacToe.Board import Board
 from TicTacToe.Player import Player
 from sys import exit
 
-class Game(object):
 
+class Game(object):
+    """The brains. Brings all other classes together and runs the game.
+    """
+
+    """This variable needs to be refactored to be scalable. Also, it may need
+    to be moved to a different place.
+    """
     winning_spaces = [[0,1,2], [3,4,5], [6,7,8], [0,3,6], [1,4,7], [2,5,8],
                         [0,4,8], [2,4,6]]
 
-
     def __init__(self, player1, player2):
+        """Initialize the game with board and two players, one of which is AI"""
         self.board = Board()
         self.p1 = player1
         self.p2 = player2
@@ -19,6 +25,9 @@ class Game(object):
         self.over = False
 
     def check(self, player):
+        """Method checks if a player has won the game and if there are still
+         available moves.
+         """
         for row in Game.winning_spaces:
             if set(player.spacestaken).intersection(row) == set(row):
                 self.winner = player
@@ -29,6 +38,10 @@ class Game(object):
             return False
 
     def taketurn(self, player):
+        """Method holds logic for each player's full turn. It returns False
+        (the value of Game.check() as long as a player has not yet won and
+        there are still moves available.
+        """
         while self.board.possiblemoves:
             space = None
             # odd syntax here because space = 0 evaluates to not space,
@@ -49,6 +62,8 @@ class Game(object):
             return True
 
     def play(self):
+        """Logic connecting each player's turn into one round."""
+        # TODO: bring while loop from main() back to Game class.
         self.over = self.taketurn(self.p1)
         if self.over:
             if self.winner:
@@ -67,6 +82,7 @@ class Game(object):
 
 
 def main():
+    """Prints a nice intro, then initializes players and starts game."""
     print("-" * 50)
     print("Welcome to Tic-Tac-Toe!")
     name = input("\nWhat is your name?\n> ")
